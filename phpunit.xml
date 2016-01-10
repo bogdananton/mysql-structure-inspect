@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        backupStaticAttributes="true"
+        mapTestClassNameToCoveredClassName="false"
+        strict="true"
+        colors="true"
+        bootstrap="tests/bootstrap.php">
+
+    <php>
+        <includePath>src/</includePath>
+        <ini name="error_reporting" value="-1"/>
+        <ini name="memory_limit" value="512M"/>
+    </php>
+
+    <!--<logging>-->
+        <!--<log type="coverage-html" target="build/coverage/" charset="UTF-8"/>-->
+        <!--<log type="testdox-html" target="build/logs/testdox.html"/>-->
+    <!--</logging>-->
+
+    <testsuites>
+        <testsuite name="all">
+            <directory suffix="Test.php">tests/</directory>
+        </testsuite>
+
+        <testsuite name="unit">
+            <directory suffix="Test.php">tests/unit/</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src</directory>
+            <exclude>
+                <directory suffix=".php">vendor</directory>
+                <file>console.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

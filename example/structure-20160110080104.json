@@ -1,0 +1,514 @@
+[
+    {
+        "name": "current_dept_emp",
+        "fields": [
+            {
+                "name": "emp_no",
+                "type": "int(11)",
+                "null": false,
+                "key": "",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "dept_no",
+                "type": "char(4)",
+                "null": false,
+                "key": "",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "from_date",
+                "type": "date",
+                "null": true,
+                "key": "",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "to_date",
+                "type": "date",
+                "null": true,
+                "key": "",
+                "default": null,
+                "extra": ""
+            }
+        ],
+        "indexes": []
+    },
+    {
+        "name": "departments",
+        "fields": [
+            {
+                "name": "dept_no",
+                "type": "char(4)",
+                "null": false,
+                "key": "PRI",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "dept_name",
+                "type": "varchar(40)",
+                "null": false,
+                "key": "UNI",
+                "default": null,
+                "extra": ""
+            }
+        ],
+        "indexes": [
+            {
+                "table": "departments",
+                "nonUnique": "0",
+                "keyName": "PRIMARY",
+                "seqInIndex": "1",
+                "columnName": "dept_no",
+                "collation": "A",
+                "cardinality": "9",
+                "subPart": null,
+                "packed": null,
+                "isNull": false,
+                "indexType": "BTREE",
+                "comment": "",
+                "indexComment": ""
+            },
+            {
+                "table": "departments",
+                "nonUnique": "0",
+                "keyName": "dept_name",
+                "seqInIndex": "1",
+                "columnName": "dept_name",
+                "collation": "A",
+                "cardinality": "9",
+                "subPart": null,
+                "packed": null,
+                "isNull": false,
+                "indexType": "BTREE",
+                "comment": "",
+                "indexComment": ""
+            }
+        ]
+    },
+    {
+        "name": "dept_emp",
+        "fields": [
+            {
+                "name": "emp_no",
+                "type": "int(11)",
+                "null": false,
+                "key": "PRI",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "dept_no",
+                "type": "char(4)",
+                "null": false,
+                "key": "PRI",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "from_date",
+                "type": "date",
+                "null": false,
+                "key": "",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "to_date",
+                "type": "date",
+                "null": false,
+                "key": "",
+                "default": null,
+                "extra": ""
+            }
+        ],
+        "indexes": [
+            {
+                "table": "dept_emp",
+                "nonUnique": "0",
+                "keyName": "PRIMARY",
+                "seqInIndex": "1",
+                "columnName": "emp_no",
+                "collation": "A",
+                "cardinality": "331570",
+                "subPart": null,
+                "packed": null,
+                "isNull": false,
+                "indexType": "BTREE",
+                "comment": "",
+                "indexComment": ""
+            },
+            {
+                "table": "dept_emp",
+                "nonUnique": "0",
+                "keyName": "PRIMARY",
+                "seqInIndex": "2",
+                "columnName": "dept_no",
+                "collation": "A",
+                "cardinality": "331570",
+                "subPart": null,
+                "packed": null,
+                "isNull": false,
+                "indexType": "BTREE",
+                "comment": "",
+                "indexComment": ""
+            },
+            {
+                "table": "dept_emp",
+                "nonUnique": "1",
+                "keyName": "dept_no",
+                "seqInIndex": "1",
+                "columnName": "dept_no",
+                "collation": "A",
+                "cardinality": "16",
+                "subPart": null,
+                "packed": null,
+                "isNull": false,
+                "indexType": "BTREE",
+                "comment": "",
+                "indexComment": ""
+            }
+        ]
+    },
+    {
+        "name": "dept_emp_latest_date",
+        "fields": [
+            {
+                "name": "emp_no",
+                "type": "int(11)",
+                "null": false,
+                "key": "",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "from_date",
+                "type": "date",
+                "null": true,
+                "key": "",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "to_date",
+                "type": "date",
+                "null": true,
+                "key": "",
+                "default": null,
+                "extra": ""
+            }
+        ],
+        "indexes": []
+    },
+    {
+        "name": "dept_manager",
+        "fields": [
+            {
+                "name": "emp_no",
+                "type": "int(11)",
+                "null": false,
+                "key": "PRI",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "dept_no",
+                "type": "char(4)",
+                "null": false,
+                "key": "PRI",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "from_date",
+                "type": "date",
+                "null": false,
+                "key": "",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "to_date",
+                "type": "date",
+                "null": false,
+                "key": "",
+                "default": null,
+                "extra": ""
+            }
+        ],
+        "indexes": [
+            {
+                "table": "dept_manager",
+                "nonUnique": "0",
+                "keyName": "PRIMARY",
+                "seqInIndex": "1",
+                "columnName": "emp_no",
+                "collation": "A",
+                "cardinality": "24",
+                "subPart": null,
+                "packed": null,
+                "isNull": false,
+                "indexType": "BTREE",
+                "comment": "",
+                "indexComment": ""
+            },
+            {
+                "table": "dept_manager",
+                "nonUnique": "0",
+                "keyName": "PRIMARY",
+                "seqInIndex": "2",
+                "columnName": "dept_no",
+                "collation": "A",
+                "cardinality": "24",
+                "subPart": null,
+                "packed": null,
+                "isNull": false,
+                "indexType": "BTREE",
+                "comment": "",
+                "indexComment": ""
+            },
+            {
+                "table": "dept_manager",
+                "nonUnique": "1",
+                "keyName": "dept_no",
+                "seqInIndex": "1",
+                "columnName": "dept_no",
+                "collation": "A",
+                "cardinality": "24",
+                "subPart": null,
+                "packed": null,
+                "isNull": false,
+                "indexType": "BTREE",
+                "comment": "",
+                "indexComment": ""
+            }
+        ]
+    },
+    {
+        "name": "employees",
+        "fields": [
+            {
+                "name": "emp_no",
+                "type": "int(11)",
+                "null": false,
+                "key": "PRI",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "birth_date",
+                "type": "date",
+                "null": false,
+                "key": "",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "first_name",
+                "type": "varchar(14)",
+                "null": false,
+                "key": "",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "last_name",
+                "type": "varchar(16)",
+                "null": false,
+                "key": "",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "gender",
+                "type": "enum('M','F')",
+                "null": false,
+                "key": "",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "hire_date",
+                "type": "date",
+                "null": false,
+                "key": "",
+                "default": null,
+                "extra": ""
+            }
+        ],
+        "indexes": [
+            {
+                "table": "employees",
+                "nonUnique": "0",
+                "keyName": "PRIMARY",
+                "seqInIndex": "1",
+                "columnName": "emp_no",
+                "collation": "A",
+                "cardinality": "299689",
+                "subPart": null,
+                "packed": null,
+                "isNull": false,
+                "indexType": "BTREE",
+                "comment": "",
+                "indexComment": ""
+            }
+        ]
+    },
+    {
+        "name": "salaries",
+        "fields": [
+            {
+                "name": "emp_no",
+                "type": "int(11)",
+                "null": false,
+                "key": "PRI",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "salary",
+                "type": "int(11)",
+                "null": false,
+                "key": "",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "from_date",
+                "type": "date",
+                "null": false,
+                "key": "PRI",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "to_date",
+                "type": "date",
+                "null": false,
+                "key": "",
+                "default": null,
+                "extra": ""
+            }
+        ],
+        "indexes": [
+            {
+                "table": "salaries",
+                "nonUnique": "0",
+                "keyName": "PRIMARY",
+                "seqInIndex": "1",
+                "columnName": "emp_no",
+                "collation": "A",
+                "cardinality": "639323",
+                "subPart": null,
+                "packed": null,
+                "isNull": false,
+                "indexType": "BTREE",
+                "comment": "",
+                "indexComment": ""
+            },
+            {
+                "table": "salaries",
+                "nonUnique": "0",
+                "keyName": "PRIMARY",
+                "seqInIndex": "2",
+                "columnName": "from_date",
+                "collation": "A",
+                "cardinality": "2557292",
+                "subPart": null,
+                "packed": null,
+                "isNull": false,
+                "indexType": "BTREE",
+                "comment": "",
+                "indexComment": ""
+            }
+        ]
+    },
+    {
+        "name": "titles",
+        "fields": [
+            {
+                "name": "emp_no",
+                "type": "int(11)",
+                "null": false,
+                "key": "PRI",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "title",
+                "type": "varchar(50)",
+                "null": false,
+                "key": "PRI",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "from_date",
+                "type": "date",
+                "null": false,
+                "key": "PRI",
+                "default": null,
+                "extra": ""
+            },
+            {
+                "name": "to_date",
+                "type": "date",
+                "null": true,
+                "key": "",
+                "default": null,
+                "extra": ""
+            }
+        ],
+        "indexes": [
+            {
+                "table": "titles",
+                "nonUnique": "0",
+                "keyName": "PRIMARY",
+                "seqInIndex": "1",
+                "columnName": "emp_no",
+                "collation": "A",
+                "cardinality": "441772",
+                "subPart": null,
+                "packed": null,
+                "isNull": false,
+                "indexType": "BTREE",
+                "comment": "",
+                "indexComment": ""
+            },
+            {
+                "table": "titles",
+                "nonUnique": "0",
+                "keyName": "PRIMARY",
+                "seqInIndex": "2",
+                "columnName": "title",
+                "collation": "A",
+                "cardinality": "441772",
+                "subPart": null,
+                "packed": null,
+                "isNull": false,
+                "indexType": "BTREE",
+                "comment": "",
+                "indexComment": ""
+            },
+            {
+                "table": "titles",
+                "nonUnique": "0",
+                "keyName": "PRIMARY",
+                "seqInIndex": "3",
+                "columnName": "from_date",
+                "collation": "A",
+                "cardinality": "441772",
+                "subPart": null,
+                "packed": null,
+                "isNull": false,
+                "indexType": "BTREE",
+                "comment": "",
+                "indexComment": ""
+            }
+        ]
+    }
+]

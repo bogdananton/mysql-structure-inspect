@@ -1,0 +1,24 @@
+{
+  "name": "bogdananton/mysql-structure-inspect",
+  "description": "Analyze a MySQL database structure.",
+  "license": "MIT",
+  "version": "1.0.0",
+  "require": {
+    "php": ">=5.4.0",
+    "symfony/console": "2.7.*",
+    "neneax/ioc": "*"
+  },
+  "require-dev": {
+    "php": ">=5.5.0",
+    "phpunit/phpunit": "5.1.*",
+    "mockery/mockery": "0.9.*",
+    "bogdananton/php-class-helper": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "DatabaseInspect\\": ["src/lib/"],
+      "DatabaseInspect\\Console\\": ["src/console/"],
+      "DatabaseInspect\\Attributes\\": ["src/attributes/"]
+    }
+  }
+}
