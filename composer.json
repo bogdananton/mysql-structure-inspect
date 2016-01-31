@@ -10,8 +10,9 @@
   },
   "require-dev": {
     "php": ">=5.5.0",
-    "phpunit/phpunit": "5.1.*",
-    "mockery/mockery": "0.9.*",
+    "phpunit/phpunit": "*",
+    "mockery/mockery": "*",
+    "satooshi/php-coveralls": "1.0.*",
     "bogdananton/php-class-helper": "dev-master"
   },
   "autoload": {
